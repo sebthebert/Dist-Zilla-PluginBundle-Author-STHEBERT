@@ -13,6 +13,8 @@ This is the Dist Zilla plugin bundle that STHEBERT uses.
 use Moose;
 with 'Dist::Zilla::Role::PluginBundle::Easy';
 
+our $VERSION = '0.2';
+
 =head1 METHODS
 
 =head2 configure()
@@ -41,6 +43,20 @@ sub configure
     }
     );
 }
+
+no Moose;
+__PACKAGE__->meta->make_immutable;
+
+1;
+
+=head1 LICENSE
+ 
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+=head1 REPOSITORY
+
+L<https://github.com/sebthebert/Dist-Zilla-PluginBundle-Author-STHEBERT>
 
 =head1 AUTHOR
 
